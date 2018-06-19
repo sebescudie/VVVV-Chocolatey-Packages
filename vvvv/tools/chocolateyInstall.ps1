@@ -1,10 +1,21 @@
-$binRoot = "$env:systemdrive\"
-if($env:chocolatey_bin_root -ne $null){$binRoot = $env:chocolatey_bin_root}
-$installPath = Join-Path $binRoot 'vvvv'
-$currentDir = 'vvvv_45beta29_x86'
-Install-ChocolateyZipPackage vvvv "http://vvvv.org/sites/all/modules/general/pubdlcnt/pubdlcnt.php?file=http://vvvv.org/sites/default/files/vvvv_45beta29_x86.zip&nid=93335" $installPath
-$workingDir = Join-Path $installPath $currentDir
-$exeFile = Join-Path $workingDir 'vvvv.exe'
-$crack = Join-Path $workingDir 'crack.exe'
-Install-ChocolateyDesktopLink $exeFile
-& $crack
+﻿$ErrorActionPreference = 'Stop'; # stop on all errors
+$toolsDir   = Join-Path $env:SystemDrive 'vvvv'
+$url        = 'https://vvvv.org/sites/all/modules/general/pubdlcnt/pubdlcnt.php?file=https://vvvv.org/sites/default/files/vvvv_50beta36_x86.zip&nid=1'
+$url64      = 'https://vvvv.org/sites/all/modules/general/pubdlcnt/pubdlcnt.php?file=https://vvvv.org/sites/default/files/vvvv_50beta36_x64.zip&nid=1'
+
+$packageArgs = @{
+  packageName   = 'vvvv'
+  unzipLocation = $toolsDir
+  fileType      = exe
+  url           = $url
+  url64bit      = $url64
+
+  softwareName  = 'vvvv'
+
+  checksum      = '54645F17A79B633CB19BFCB246F8825F8DB636232F9B803FED0E8E8BCC54E8F5'
+  checksumType  = 'sha256'
+  checksum64    = '6FA2A6DF21A0EF1E35A485E732898DBA4E9F413F20300ED046CA84F2A560CFDB'
+  checksumType64= 'sha256'
+}
+
+Install-ChocolateyZipPackage @packageArgs

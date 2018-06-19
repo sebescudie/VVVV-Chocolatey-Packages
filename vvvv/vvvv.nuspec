@@ -1,29 +1,34 @@
-<?xml version="1.0"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>vvvv</id>
+    <version>36.1</version>
+    <!-- <packageSourceUrl>Where is this Chocolatey package located (think GitHub)? packageSourceUrl is highly recommended for the community feed</packageSourceUrl>-->
+    <owners>smakhtin, sebescudie</owners>
+
     <title>vvvv</title>
-    <version>29.0.1</version>
     <authors>vvvv group</authors>
-    <!-- <owners>vvvv group</owners> -->
-    <summary>vvvv - a multipurpose toolkit</summary>
-    <description>vvvv is a hybrid graphical/textual programming environment for easy prototyping and development. It is designed to facilitate the handling of large media environments with physical interfaces, real-time motion graphics, audio and video that can interact with many users simultaneously.</description>
-    <projectUrl>http://vvvv.org</projectUrl>
-    <tags>vvvv node graphicall programming</tags>
-    <copyright>vvvv group</copyright>
-    <licenseUrl>http://vvvv.org/licensing</licenseUrl>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectUrl>vvvv.org</projectUrl>
     <iconUrl>http://vvvv.org/sites/all/themes/vvvv/css/img/logo.png</iconUrl>
+    <copyright>2018</copyright>
+    <licenseUrl>http://vvvv.org/licensing</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>-->
+    <tags>vvvv, nodal, graphical programming, creative coding</tags>
+    <summary>vvvv - a multipurpose toolkit</summary>
+    <description>vvvv is a hybrid graphical/textual programming environment for easy prototyping and development. It is designed to facilitate the handling of large media environments with physical interfaces, real-time motion graphics, audio and video that can interact with many users simultaneously.</description>   
+
+    <!-- Specifying dependencies and version ranges? https://docs.nuget.org/create/versioning#specifying-version-ranges-in-.nuspec-files -->
     <dependencies>
-      <dependency id="vcredist2008" version="9.0.30729.1"/>
-      <dependency id="vcredist2010" version="10.0.40219.1"/>
-      <!-- DirectX 9.0c - not yet found as package <dependency id="" version="" /> -->
-      <!-- dot net 4.0 Redistributable - not yet found as package <dependency id="" version="" /> -->
-	</dependencies>
-    <releaseNotes></releaseNotes>
+      <dependency id="vcredist2008" version="9.0.30729.6161"/>
+      <dependency id="vcredist2010" version="10.0.40219.2"/>
+      <dependency id="vcredist2012" version="11.0.61031"/>
+      <dependency id="vcredist2013" version="12.0.40660.20180427"/>
+      <dependency id="vcredist140" version="14.12.25810"/> <!-- vcredist 2017 -->
+      <dependency id="dotnet4.6.1" version="4.6.01055.20170308"/>
+      <dependency id="chocolatey-core.extension" version="1.1.0" />
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
-    <!--<file src="content\**" target="content" />-->
   </files>
 </package>

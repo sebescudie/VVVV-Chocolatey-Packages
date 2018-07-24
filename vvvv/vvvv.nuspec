@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>vvvv</id>
-    <version>36</version>
+    <version>36.0</version>
     <title>vvvv</title>
     <authors>vvvv group</authors>
     <owners>smakhtin, sebescudie</owners>

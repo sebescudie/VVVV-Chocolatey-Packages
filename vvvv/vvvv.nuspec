@@ -9,7 +9,7 @@
     <licenseUrl>http://vvvv.org/licensing</licenseUrl>
     <projectUrl>http://vvvv.org</projectUrl>
     <iconUrl>http://vvvv.org/sites/all/themes/vvvv/css/img/logo.png</iconUrl>
-    <copyright>2018</copyright>
+    <copyright>2018, vvvv group</copyright>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <tags>vvvv, nodal, graphical programming, creative coding</tags>
     <summary>vvvv - a multipurpose toolkit</summary>

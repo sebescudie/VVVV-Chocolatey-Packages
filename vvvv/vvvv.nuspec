@@ -6,9 +6,9 @@
     <title>vvvv</title>
     <authors>vvvv group</authors>
     <owners>smakhtin, sebescudie</owners>
-    <licenseUrl>http://vvvv.org/licensing</licenseUrl>
+    <licenseUrl>vvvv.org/licensing</licenseUrl>
     <projectUrl>vvvv.org</projectUrl>
-    <iconUrl>http://vvvv.org/sites/all/themes/vvvv/css/img/logo.png</iconUrl>
+    <iconUrl>vvvv.org/sites/all/themes/vvvv/css/img/logo.png</iconUrl>
     <copyright>2018</copyright>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <tags>vvvv, nodal, graphical programming, creative coding</tags>

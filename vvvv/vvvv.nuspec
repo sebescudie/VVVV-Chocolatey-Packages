@@ -6,16 +6,14 @@
     <title>vvvv</title>
     <authors>vvvv group</authors>
     <owners>smakhtin, sebescudie</owners>
-    <licenseUrl>vvvv.org/licensing</licenseUrl>
+    <licenseUrl>http://vvvv.org/licensing</licenseUrl>
     <projectUrl>vvvv.org</projectUrl>
-    <iconUrl>vvvv.org/sites/all/themes/vvvv/css/img/logo.png</iconUrl>
+    <iconUrl>http://vvvv.org/sites/all/themes/vvvv/css/img/logo.png</iconUrl>
     <copyright>2018</copyright>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <tags>vvvv, nodal, graphical programming, creative coding</tags>
     <summary>vvvv - a multipurpose toolkit</summary>
-    <description>vvvv is a hybrid graphical/textual programming environment for easy prototyping and development. It is designed to facilitate the handling of large media environments with physical interfaces, real-time motion graphics, audio and video that can interact with many users simultaneously.</description>   
-
-    <!-- Specifying dependencies and version ranges? https://docs.nuget.org/create/versioning#specifying-version-ranges-in-.nuspec-files -->
+    <description>vvvv is a hybrid graphical/textual programming environment for easy prototyping and development. It is designed to facilitate the handling of large media environments with physical interfaces, real-time motion graphics, audio and video that can interact with many users simultaneously.</description>
     <dependencies>
       <dependency id="vcredist2008" version="9.0.30729.6161"/>
       <dependency id="vcredist2010" version="10.0.40219.2"/>

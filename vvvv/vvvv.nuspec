@@ -15,7 +15,7 @@
     <summary>vvvv - a multipurpose toolkit</summary>
     <description>vvvv is a hybrid graphical/textual programming environment for easy prototyping and development. It is designed to facilitate the handling of large media environments with physical interfaces, real-time motion graphics, audio and video that can interact with many users simultaneously.</description>
     <releaseNotes>https://vvvv.org/documentation/change-log#node-248849</releaseNotes>
-    <packageSorceUrl>https://chocolatey.org/packages/vvvv</packageSorceUrl>
+    <packageSuorceUrl>https://chocolatey.org/packages/vvvv</packageSourceUrl>
     <docsUrl>https://vvvv.org/documentation/documentation</docsUrl>
     <mailingListUrl>https://discourse.vvvv.org</mailingListUrl>
     <dependencies>

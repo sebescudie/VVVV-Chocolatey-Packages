@@ -20,11 +20,11 @@
     <mailingListUrl>https://discourse.vvvv.org</mailingListUrl>
     <dependencies>
       <dependency id="directx" version="9.29.1974.20180606"/>
-      <dependency id="vcredist2008" version="9.0.30729.6161"/>
+      <dependency id="vcredist2008" version="9.0.30729.17"/>
       <dependency id="vcredist2010" version="10.0.40219.2"/>
       <dependency id="vcredist2012" version="11.0.61031"/>
-      <dependency id="vcredist2013" version="12.0.40660.20180427"/>
-      <dependency id="vcredist140" version="14.12.25810"/> <!-- vcredist 2017 -->
+      <dependency id="vcredist2013" version="12.0.30501.0"/>
+      <dependency id="vcredist2017" version="14.11.25325.0"/>
       <dependency id="dotnet4.6.1" version="4.6.01055.20170308"/>
       <dependency id="chocolatey-core.extension" version="1.1.0" />
     </dependencies>

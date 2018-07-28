@@ -6,7 +6,7 @@ $url64      = 'https://vvvv.org/sites/all/modules/general/pubdlcnt/pubdlcnt.php?
 $packageArgs = @{
   packageName   = 'vvvv'
   unzipLocation = $toolsDir
-  fileType      = exe
+  fileType      = 'exe'
   url           = $url
   url64bit      = $url64
 

@@ -12,7 +12,7 @@
     <copyright>2018, vvvv group</copyright>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <tags>vvvv nodal graphical programming creative coding</tags>
-    <summary>addonpack, a collection of user-contributted addons</summary>
+    <summary>addonpack, a collection of user-contributted addons for vvvv</summary>
     <description>The addonpack is a collection of user-contributted addons and provices > 600 essential nodes for your patching pleasure.</description>
     <releaseNotes>https://vvvv.org/documentation/addons-change-log#node-248850</releaseNotes>
     <packageSourceUrl>https://chocolatey.org/packages/vvvv-addonpack</packageSourceUrl>

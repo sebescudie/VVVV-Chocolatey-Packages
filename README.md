@@ -25,7 +25,7 @@ If you wanna install the addonpack at the same time, just type
 choco install vvvv vvvv-addonpack -y
 ```
 
-The installer defaults to x68, but you can add the `--forcex86` argument to install the 32bits build of vvvv.
+The installer defaults to x64, but you can add the `--forcex86` argument to install the 32bits build of vvvv.
 
 For now, everything goes in `C:\vvvv\vvvversion`. A future update will allow you to specify a custom location for your installation.
 

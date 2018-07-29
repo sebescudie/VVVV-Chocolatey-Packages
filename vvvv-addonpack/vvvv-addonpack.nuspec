@@ -1,33 +1,25 @@
-<?xml version="1.0"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>vvvv-addonpack</id>
-    <title>vvvv addonpack</title>
-    <version>29.0</version>
-    <authors>vvvv community, vvvv group</authors>
-    <!-- <owners></owners> -->
-    <summary>Convenience pack of most available vvvv addons</summary>
-    <description>vvvv itself is not open source, but it offers different open interfaces for people to write their own nodes:
-Plugins - most general interface for writing multipurpose nodes
-Freeframes - video effects/analysis nodes
-Effects - vertex- and pixelshader
-Modules - reusable vvvv-patches
-VST - audio effects/analysis nodes
-Many users share their work mostly under the LGPL opensource license. Those nodes, not being part of the main executable are called addons and their sources are being hosted on github.
-All contributed addons are available via a separately downloadable addonpack in order to allow independent release cycles of the main vvvv application and user submitted content.</description>
-    <projectUrl>http://vvvv.org/documentation/addons</projectUrl>
-    <tags>vvvv addons node graphicall programming</tags>
-    <copyright>vvvv community</copyright>
-    <licenseUrl>http://www.gnu.org/licenses/lgpl.html</licenseUrl>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <version>36.1</version>
+    <title>vvvv</title>
+    <authors>vvvv group</authors>
+    <owners>smakhtin, sebescudie</owners>
+    <licenseUrl>http://vvvv.org/licensing</licenseUrl>
+    <projectUrl>http://vvvv.org</projectUrl>
     <iconUrl>http://vvvv.org/sites/all/themes/vvvv/css/img/logo.png</iconUrl>
-    <dependencies>
-      <dependency id="vvvv" version="29.0"/>
-    </dependencies>
-    <releaseNotes></releaseNotes>
+    <copyright>2018, vvvv group</copyright>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <tags>vvvv nodal graphical programming creative coding</tags>
+    <summary>addonpack, a collection of user-contributted addons</summary>
+    <description>The addonpack is a collection of user-contributted addons and provices > 600 essential nodes for your patching pleasure.</description>
+    <releaseNotes>https://vvvv.org/documentation/addons-change-log#node-248850</releaseNotes>
+    <packageSourceUrl>https://chocolatey.org/packages/vvvv-addonpack</packageSourceUrl>
+    <docsUrl>https://vvvv.org/documentation/documentation</docsUrl>
+    <mailingListUrl>https://discourse.vvvv.org</mailingListUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
-    <!--<file src="content\**" target="content" />-->
   </files>
 </package>

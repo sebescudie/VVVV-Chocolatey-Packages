@@ -10,7 +10,7 @@ $packageArgs = @{
   url           = $url
   url64bit      = $url64
 
-  softwareName  = 'vvvv'
+  softwareName  = 'vvvv-addonpack'
 
   checksum      = 'C2A3948B05B04244BCC031DBFB15DB0359631B635D6179E24C3B75E28121000C'
   checksumType  = 'sha256'

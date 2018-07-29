@@ -3,11 +3,11 @@ $ErrorActionPreference = 'Stop';
 # Find if user forces x86 or not and set $toolsDir accordingly
 if($PSBoundParameters.ContainsKey('forcex86'))
 {
-    $toolsDir = Join-Path $env:SystemDrive 'vvvv' 'vvvv_50beta36_x86'
+    $toolsDir = Join-Path $env:SystemDrive 'vvvv\vvvv_50beta36_x86'
 }
 else
 {
-    $toolsDir = Join-Path $env:SystemDrive 'vvvv' 'vvvv_50beta36_x64'
+    $toolsDir = Join-Path $env:SystemDrive 'vvvv\vvvv_50beta36_x64'
 }
 
 $url        = 'https://vvvv.org/sites/all/modules/general/pubdlcnt/pubdlcnt.php?file=https://vvvv.org/sites/default/files/addons_50beta36_x86.zip&nid=1'

@@ -1,7 +1,7 @@
 $ErrorActionPreference = 'Stop';
 
 # Find if user forces x86 or not and set $toolsDir accordingly
-if($PSBoundParameters.ContainsKey('forcex86') || $PSBoundParameters.ContainsKey('x86'))
+if($PSBoundParameters.ContainsKey('forcex86'))
 {
     $toolsDir = Join-Path $env:SystemDrive 'vvvv' 'vvvv_50beta36_x86'
 }

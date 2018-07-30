@@ -1,7 +1,7 @@
 $ErrorActionPreference = 'Stop';
 
 # Find if user forces x86 or not and set $toolsDir accordingly
-if($PSBoundParameters.ContainsKey('forcex86'))
+if((Get-ProcessorBits 32) -or $env:chocolateyForceX86 -eq $true)
 {
     $toolsDir = Join-Path $env:SystemDrive 'vvvv\vvvv_50beta36_x86'
 }

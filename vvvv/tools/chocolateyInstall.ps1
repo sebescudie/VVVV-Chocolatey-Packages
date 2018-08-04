@@ -44,3 +44,6 @@ Install-BinFile -Name vvvv -Path $executablePath
 # Create a var holding vvvv's desktop shortcut and create it
 $shortcutPath = [io.path]::combine([Environment]::GetFolderPath("Desktop"), 'vvvv.lnk')
 Install-ChocolateyShortcut -ShortcutFilePath $shortcutPath -TargetPath $executablePath -PinToTaskbar $true
+
+# Open setup.exe once to check dependencies and set VVVV's env variables
+start [io.path]::combine(^$toolsDir, $vvvvFolder, 'setup.exe')

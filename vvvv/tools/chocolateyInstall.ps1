@@ -8,6 +8,19 @@ $pp         = Get-PackageParameters
 if(!$pp.InstallationPath) { $pp.InstallationPath = "$env:SystemDrive\vvvv"}
 $toolsDir   = $pp.InstallationPath
 
+# Get correct vvvv folder name based on chosen architecture
+if((Get-ProcessorBits 32) -or $env:chocolateyForceX86 -eq $true)
+{
+  $vvvvFolder = 'vvvv_50beta36_x86'
+}
+else 
+{
+  $vvvvFolder = 'vvvv_50beta36_x64'  
+}
+
+# Join vvvv's exe path for this installation
+$executablePath = Joint-Path $toolsDir $vvvvFolder 'vvvv.exe'
+
 $packageArgs = @{
   packageName   = 'vvvv'
   unzipLocation = $toolsDir
@@ -23,5 +36,6 @@ $packageArgs = @{
   checksumType64= 'sha256'
 }
 
-
 Install-ChocolateyZipPackage @packageArgs
+Install-BinFile -Name vvvv -Path $executablePath
+Install-ChocolateyShortcut -ShortcutFilePath [Environment]::GetFolderPath("Desktop") -TargetPath $executablePath -PinToTaskbar $true

@@ -19,7 +19,7 @@ else
 }
 
 # Join vvvv's exe path for this installation
-$executablePath = Joint-Path $toolsDir $vvvvFolder 'vvvv.exe'
+$executablePath = [io.path]::combine($toolsDir, $vvvvFolder, 'vvvv.exe')
 
 $packageArgs = @{
   packageName   = 'vvvv'
@@ -37,5 +37,10 @@ $packageArgs = @{
 }
 
 Install-ChocolateyZipPackage @packageArgs
+
+# Create a shim to vvvv.exe
 Install-BinFile -Name vvvv -Path $executablePath
-Install-ChocolateyShortcut -ShortcutFilePath [Environment]::GetFolderPath("Desktop") -TargetPath $executablePath -PinToTaskbar $true
+
+# Create a var holding vvvv's desktop shortcut and create it
+$shortcutPath = [io.path]::combine([Environment]::GetFolderPath("Desktop"), 'vvvv.lnk')
+Install-ChocolateyShortcut -ShortcutFilePath $shortcutPath -TargetPath $executablePath -PinToTaskbar $true

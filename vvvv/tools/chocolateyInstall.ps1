@@ -3,6 +3,7 @@
 $url        = 'https://vvvv.org/sites/all/modules/general/pubdlcnt/pubdlcnt.php?file=https://vvvv.org/sites/default/files/vvvv_50beta36_x86.zip&nid=1'
 $url64      = 'https://vvvv.org/sites/all/modules/general/pubdlcnt/pubdlcnt.php?file=https://vvvv.org/sites/default/files/vvvv_50beta36_x64.zip&nid=1'
 $pp         = Get-PackageParameters
+$regKey = 'HKLM:\Software\vvvvChocolatey'
 
 # Check if user has passed a custom InstallationPath
 if(!$pp.InstallationPath) { $pp.InstallationPath = "$env:SystemDrive\vvvv"}
@@ -37,13 +38,6 @@ $packageArgs = @{
 }
 
 Install-ChocolateyZipPackage @packageArgs
-
-# Create a shim to vvvv.exe
-Install-BinFile -Name vvvv -Path $executablePath
-
-# Create a var holding vvvv's desktop shortcut and create it
-$shortcutPath = [io.path]::combine([Environment]::GetFolderPath("Desktop"), 'vvvv.lnk')
-Install-ChocolateyShortcut -ShortcutFilePath $shortcutPath -TargetPath $executablePath -PinToTaskbar $true
 
 # Open setup.exe to check dependencies and set VVVV's env variables
 $setupPath = [io.path]::combine($toolsDir, $vvvvFolder, 'setup.exe')

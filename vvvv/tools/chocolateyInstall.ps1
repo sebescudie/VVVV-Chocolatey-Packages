@@ -23,13 +23,13 @@ else
 $executablePath = [io.path]::combine($toolsDir, $vvvvFolder, 'vvvv.exe')
 
 $packageArgs = @{
-  packageName   = 'vvvv'
+  packageName   = 'vvvv36'
   unzipLocation = $toolsDir
   fileType      = 'exe'
   url           = $url
   url64bit      = $url64
 
-  softwareName  = 'vvvv36'
+  softwareName  = 'vvvv'
 
   checksum      = '54645F17A79B633CB19BFCB246F8825F8DB636232F9B803FED0E8E8BCC54E8F5'
   checksumType  = 'sha256'
@@ -39,6 +39,7 @@ $packageArgs = @{
 
 Install-ChocolateyZipPackage @packageArgs
 
-# Open setup.exe to check dependencies and set VVVV's env variables
+# Silentely start setup.exe
 $setupPath = [io.path]::combine($toolsDir, $vvvvFolder, 'setup.exe')
-start $setupPath
+$arg = '/silent'
+Start-Process $setupPath $arg

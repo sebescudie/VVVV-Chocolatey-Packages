@@ -29,7 +29,7 @@ $packageArgs = @{
   url           = $url
   url64bit      = $url64
 
-  softwareName  = 'vvvv'
+  softwareName  = 'vvvv36'
 
   checksum      = '54645F17A79B633CB19BFCB246F8825F8DB636232F9B803FED0E8E8BCC54E8F5'
   checksumType  = 'sha256'

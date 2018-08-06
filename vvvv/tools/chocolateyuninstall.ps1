@@ -15,10 +15,10 @@ else
 }
 
 $uninstallerPath = [io.path]::combine($toolsDir, $vvvvFolder, 'setup.exe')
-$uninstallerAgs = @("/unregister")
+$uninstallerAgs = @("/unregister /silent")
 
 # Choco uninstall vvvv perform setup.exe uninstall silentely
 Uninstall-ChocolateyPackage -PackageName 'vvvv36' -Path $uninstallerPath -SilentArgs $uninstallerAgs
 
 # Delete the vvvv folder
-Remove-Item $toolsDir -Force -Recurse
+Remove-Item $toolsDir -Force -Recus

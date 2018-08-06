@@ -14,7 +14,7 @@ $url        = 'https://vvvv.org/sites/all/modules/general/pubdlcnt/pubdlcnt.php?
 $url64      = 'https://vvvv.org/sites/all/modules/general/pubdlcnt/pubdlcnt.php?file=https://vvvv.org/sites/default/files/addons_50beta36_x64.zip&nid=1'
 
 $packageArgs = @{
-  packageName   = 'vvvv-addonpack'
+  packageName   = 'vvvv-addonpack36.1'
   unzipLocation = $toolsDir
   url           = $url
   url64bit      = $url64

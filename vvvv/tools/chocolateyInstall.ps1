@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'; # stop on all errors
 
-$url        = 'https://vvvv.org/sites/all/modules/general/pubdlcnt/pubdlcnt.php?file=https://vvvv.org/sites/default/files/vvvv_50beta36_x86.zip&nid=1'
-$url64      = 'https://vvvv.org/sites/all/modules/general/pubdlcnt/pubdlcnt.php?file=https://vvvv.org/sites/default/files/vvvv_50beta36_x64.zip&nid=1'
+$url        = 'https://vvvv.org/sites/all/modules/general/pubdlcnt/pubdlcnt.php?file=https://vvvv.org/sites/default/files/vvvv_50beta37_x86_0.zip&nid=1'
+$url64      = 'https://vvvv.org/sites/all/modules/general/pubdlcnt/pubdlcnt.php?file=https://vvvv.org/sites/default/files/vvvv_50beta37_x64_0.zip&nid=1'
 $pp         = Get-PackageParameters
 $regKey = 'HKLM:\Software\vvvvChocolatey'
 
@@ -12,18 +12,18 @@ $toolsDir   = $pp.InstallationPath
 # Get correct vvvv folder name based on chosen architecture
 if((Get-ProcessorBits 32) -or $env:chocolateyForceX86 -eq $true)
 {
-  $vvvvFolder = 'vvvv_50beta36_x86'
+  $vvvvFolder = 'vvvv_50beta37_x86'
 }
 else 
 {
-  $vvvvFolder = 'vvvv_50beta36_x64'  
+  $vvvvFolder = 'vvvv_50beta37_x64'  
 }
 
 # Join vvvv's exe path for this installation
 $executablePath = [io.path]::combine($toolsDir, $vvvvFolder, 'vvvv.exe')
 
 $packageArgs = @{
-  packageName   = 'vvvv36'
+  packageName   = 'vvvv37'
   unzipLocation = $toolsDir
   fileType      = 'exe'
   url           = $url
@@ -31,9 +31,9 @@ $packageArgs = @{
 
   softwareName  = 'vvvv'
 
-  checksum      = '54645F17A79B633CB19BFCB246F8825F8DB636232F9B803FED0E8E8BCC54E8F5'
+  checksum      = '3e16c93e406a9fa6205ebec6f56ef38146c7ea6484d390e30b236522344a3843'
   checksumType  = 'sha256'
-  checksum64    = '6FA2A6DF21A0EF1E35A485E732898DBA4E9F413F20300ED046CA84F2A560CFDB'
+  checksum64    = '1669bb30880122f648bca7ed8c2bf58d4fe57aaded2ddf23faac29eeac43f7a9'
   checksumType64= 'sha256'
 }
 

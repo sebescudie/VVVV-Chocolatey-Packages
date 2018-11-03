@@ -3,27 +3,27 @@ $ErrorActionPreference = 'Stop';
 # Find if user forces x86 or not and set $toolsDir accordingly
 if((Get-ProcessorBits 32) -or $env:chocolateyForceX86 -eq $true)
 {
-    $toolsDir = Join-Path $env:SystemDrive 'vvvv\vvvv_50beta36_x86'
+    $toolsDir = Join-Path $env:SystemDrive 'vvvv\vvvv_50beta37_x86'
 }
 else
 {
-    $toolsDir = Join-Path $env:SystemDrive 'vvvv\vvvv_50beta36_x64'
+    $toolsDir = Join-Path $env:SystemDrive 'vvvv\vvvv_50beta37_x64'
 }
 
-$url        = 'https://vvvv.org/sites/all/modules/general/pubdlcnt/pubdlcnt.php?file=https://vvvv.org/sites/default/files/addons_50beta36_x86.zip&nid=1'
-$url64      = 'https://vvvv.org/sites/all/modules/general/pubdlcnt/pubdlcnt.php?file=https://vvvv.org/sites/default/files/addons_50beta36_x64.zip&nid=1'
+$url        = 'https://vvvv.org/sites/all/modules/general/pubdlcnt/pubdlcnt.php?file=https://vvvv.org/sites/default/files/addons_50beta37_x86_0.zip&nid=1'
+$url64      = 'https://vvvv.org/sites/all/modules/general/pubdlcnt/pubdlcnt.php?file=https://vvvv.org/sites/default/files/addons_50beta37_x64.zip&nid=1'
 
 $packageArgs = @{
-  packageName   = 'vvvv-addonpack36.1'
+  packageName   = 'vvvv-addonpack37.1'
   unzipLocation = $toolsDir
   url           = $url
   url64bit      = $url64
 
   softwareName  = 'vvvv-addonpack'
 
-  checksum      = 'C2A3948B05B04244BCC031DBFB15DB0359631B635D6179E24C3B75E28121000C'
+  checksum      = 'dfe590ea243517dc2dbda7591f037431f66336adf8fea395fe9ba2785f099f06'
   checksumType  = 'sha256'
-  checksum64    = '7178C1234A8A4C39CD80581C8E01763759F33975BD9DFE1DC74F29F0A270C306'
+  checksum64    = 'dacb6d09ddf2d2f53bd24ebaa44fd985539b4876865fbc5b77eba5ffbb7b526f'
   checksumType64= 'sha256'
 }
 

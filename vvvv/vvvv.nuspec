@@ -2,8 +2,8 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>vvvv</id>
-    <version>36.0</version>
-    <title>vvvv36</title>
+    <version>37.0</version>
+    <title>vvvv37</title>
     <authors>vvvv group</authors>
     <owners>smakhtin, sebescudie</owners>
     <licenseUrl>http://vvvv.org/licensing</licenseUrl>

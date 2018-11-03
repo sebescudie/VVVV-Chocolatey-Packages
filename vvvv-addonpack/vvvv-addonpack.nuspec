@@ -2,8 +2,8 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>vvvv-addonpack</id>
-    <version>36.1</version>
-    <title>vvvv-addonpack36.1</title>
+    <version>37.1</version>
+    <title>vvvv-addonpack37.1</title>
     <authors>vvvv group</authors>
     <owners>smakhtin, sebescudie</owners>
     <licenseUrl>http://vvvv.org/licensing</licenseUrl>
